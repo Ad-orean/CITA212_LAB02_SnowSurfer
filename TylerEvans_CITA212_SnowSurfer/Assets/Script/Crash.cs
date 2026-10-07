@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Crash : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)
@@ -8,7 +8,7 @@ public class Crash : MonoBehaviour
 
         if (collision.gameObject.layer == layerIndex)
         {
-            Debug.Log("The player has lost!");
+            SceneManager.LoadScene(0);
         }
     }
 }
