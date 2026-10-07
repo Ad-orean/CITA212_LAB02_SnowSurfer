@@ -8,7 +8,13 @@ public class FinishLine : MonoBehaviour
 
         if (collision.gameObject.layer == layerIndex)
         {
+            Invoke("ReloadScene",1f);
+        }
+    }
+
+        void ReloadScene()
+        {
             SceneManager.LoadScene(0);
         }
     }
-}
+
